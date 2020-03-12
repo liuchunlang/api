@@ -23,6 +23,12 @@
 </head>
 
 <body>
+  <!--nav 可以删除去-->
+  <nav>
+      <a href="#/">EN</a>
+      <a href="#/zh-cn/">中文</a>
+  </nav>
+  
   <div id="app">加载中...</div>
   <script>
     window.$docsify = {
@@ -93,17 +99,6 @@
         return marked;
       },
     };
-    window.sidebar = [
-      { slug: '/', title: 'Home' },
-      {
-        slug: '/pageA',
-        title: 'page A',
-        children: [
-          { slug: '/pageA/childrenB', title: 'children B' }
-        ]
-      },
-      { slug: '/PageC', title: 'Page C' }
-    ]
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 </body>
