@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-12 11:54:24
- * @LastEditTime: 2020-03-12 13:04:14
+ * @LastEditTime: 2020-03-12 13:21:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \docs\index.html
@@ -20,13 +20,14 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css">
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
 </head>
 
 <body>
   <!--nav 可以删除去-->
   <nav>
-      <a href="#/">EN</a>
-      <a href="#/zh-cn/">中文</a>
+      <a href="https://liucl.cn">凉菜科技</a>
+      <a href="https://liucl.cn">凉菜博客</a>
   </nav>
   
   <div id="app">加载中...</div>
@@ -45,28 +46,13 @@
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       name: '凉菜服务文档',
-      subMaxLevel: 2,
+      subMaxLevel: 6,
       repo: 'liuchunlang/api',
-      markdown: {
-        smartypants: true,
-        renderer: {
-          link: function () {
-            // ...
-          },
-        },
-      }, search: 'auto', // default
-
-      search: [
-        '/',            // => /README.md
-        '/guide',       // => /guide.md
-        '/get-started', // => /get-started.md
-        '/zh-cn/',      // => /zh-cn/README.md
-      ],
-
+      search: 'auto', // default
       // complete configuration parameters
       search: {
         maxAge: 86400000, // Expiration time, the default one day
-        paths: [], // or 'auto'
+        paths: auto, // or 'auto'
         placeholder: 'Type to search',
 
         // Localization
@@ -99,8 +85,20 @@
         return marked;
       },
     };
+    const gitalk = new Gitalk({
+    clientID: 'Github Application Client ID',
+    clientSecret: 'Github Application Client Secret',
+    repo: 'https://github.com/liuchunlang/api',
+    owner: '凉菜',
+    admin: ['1659488338@qq.com'],
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+  })
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 </body>
 
 </html>
