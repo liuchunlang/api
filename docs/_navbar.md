@@ -1,4 +1,4 @@
-- [下载](https://f.liucl.cn)
+- [下载](http://f.liucl.cn)
 - 关于我
   - [凉菜科技](https://liucl.cn)
   - [凉菜博客](https://blog.liucl.cn)
