@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-12 11:54:24
- * @LastEditTime: 2020-03-12 13:21:57
+ * @LastEditTime: 2020-03-12 13:27:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \docs\index.html
@@ -53,36 +53,19 @@
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: auto, // or 'auto'
-        placeholder: 'Type to search',
-
         // Localization
         placeholder: {
-          '/zh-cn/': '搜索',
-          '/': 'Type to search'
+          '/': '搜索'
         },
 
-        noData: 'No Results!',
-
-        // Localization
-        noData: {
-          '/zh-cn/': '找不到结果',
-          '/': 'No Results'
-        },
-
-        // Headline depth, 1 - 6
-        depth: 2,
+        noData: '找不到结果!',
+        depth: 6,
 
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
 
         // To avoid search index collision
         // between multiple websites under the same domain
-        namespace: 'website-1',
-      },
-
-      // function
-      markdown: function (marked, renderer) {
-        // ...
-        return marked;
+        namespace: 'LcDocs',
       },
     };
     const gitalk = new Gitalk({
