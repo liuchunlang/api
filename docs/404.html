@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-12 11:54:24
- * @LastEditTime: 2020-03-12 12:44:17
+ * @LastEditTime: 2020-03-12 12:47:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \docs\index.html
@@ -24,11 +24,14 @@
   <div id="app">加载中...</div>
   <script>
     window.$docsify = {
-      loadSidebar: true, alias: {
+    coverpage: true,
+      loadSidebar: true,
+      alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
-      name: 'liuchunlang/api',
-      repo: ''
+      name: '凉菜服务文档',
+      subMaxLevel: 2,
+      repo: 'liuchunlang/api'
     };
     window.sidebar = [
       { slug: '/', title: 'Home' },
