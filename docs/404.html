@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-12 11:54:24
- * @LastEditTime: 2020-03-12 12:47:56
+ * @LastEditTime: 2020-03-12 13:04:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \docs\index.html
@@ -16,22 +16,82 @@
   <meta name="description" content="Description">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/buble.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css">
 </head>
 
 <body>
   <div id="app">加载中...</div>
   <script>
     window.$docsify = {
-    coverpage: true,
+      logo: '/_media/logo.png',
+      nameLink: 'https://liucl.cn',
+      themeColor: '#3F51B5',
+      autoHeader: true,
+      noEmoji: false,
+      mergeNavbar: true,
+      coverpage: true,
       loadSidebar: true,
+      auto2top: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       name: '凉菜服务文档',
       subMaxLevel: 2,
-      repo: 'liuchunlang/api'
+      repo: 'liuchunlang/api',
+      markdown: {
+        smartypants: true,
+        renderer: {
+          link: function () {
+            // ...
+          },
+        },
+      }, search: 'auto', // default
+
+      search: [
+        '/',            // => /README.md
+        '/guide',       // => /guide.md
+        '/get-started', // => /get-started.md
+        '/zh-cn/',      // => /zh-cn/README.md
+      ],
+
+      // complete configuration parameters
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: [], // or 'auto'
+        placeholder: 'Type to search',
+
+        // Localization
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': 'Type to search'
+        },
+
+        noData: 'No Results!',
+
+        // Localization
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': 'No Results'
+        },
+
+        // Headline depth, 1 - 6
+        depth: 2,
+
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+
+        // To avoid search index collision
+        // between multiple websites under the same domain
+        namespace: 'website-1',
+      },
+
+      // function
+      markdown: function (marked, renderer) {
+        // ...
+        return marked;
+      },
     };
     window.sidebar = [
       { slug: '/', title: 'Home' },
