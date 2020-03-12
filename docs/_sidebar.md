@@ -1,4 +1,11 @@
 - 开始使用
     * [快速开始](/start/READEME.md)
 - 接口列表
-    * [接口列表](apiList.md "查阅支持的接口调用方法")
+    * [网址缩短](/shortUrl)
+    * [二维码生成](/qrcode)
+    * [字符串加密解密](/crypt)
+    * [网易云音乐](/netease)
+    * [天气查询](/weather)
+- 其他说明
+    * [关于](/about)
+    * [版权归属](/copyright)
