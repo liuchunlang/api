@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-12 11:54:24
- * @LastEditTime: 2020-03-12 12:16:57
+ * @LastEditTime: 2020-03-12 12:28:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \docs\index.html
@@ -15,15 +15,32 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/buble.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <nav>
+      <a href="/docsify/">En</a>
+      <a href="/docsify/zh-cn">中文</a>
+    </nav>
+  </div>
   <script>
     window.$docsify = {
       name: '',
       repo: ''
-    }
+    };
+    window.sidebar = [
+    { slug: '/', title: 'Home' },
+    {
+      slug: '/pageA',
+      title: 'page A',
+      children: [
+        { slug: '/pageA/childrenB', title: 'children B' }
+      ]
+    },
+    { slug: '/PageC', title: 'Page C' }
+  ]
   </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify" data-repo="liuchunlang/api" data-max-level="6" data-el="#app" data-sidebar-toggle data-load-navbar></script>
 </body>
 </html>
